@@ -5,7 +5,7 @@ FROM lassoan/slicer-notebook:5.0.3
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='image3d-env'
-ENV VERSION='2023-01-19' 
+ENV VERSION='2023-01-20' 
 
 # Docker name to shell prompt
 ENV PS1A="[docker] \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
@@ -24,5 +24,7 @@ RUN ./Slicer/bin/PythonSlicer -m pip install -r requirements.txt
 
 ADD scripts/entrypoint.sh /
 ADD scripts/launch_slicer_jupyter.sh /
-#CMD ["sh", "-c", "/home/sliceruser/Slicer/bin/PythonSlicer -m jupyter notebook --port=$JUPYTERPORT --allow-root --ip=0.0.0.0 --no-browser --NotebookApp.default_url=/lab/"]
+ADD scripts/message.sh /
+RUN echo "bash /message.sh" >> ~/.bashrc
+
 CMD ["sh", "-c", "/home/sliceruser/Slicer/bin/PythonSlicer -m jupyter lab --port=$JUPYTERPORT --allow-root --ip=0.0.0.0"]

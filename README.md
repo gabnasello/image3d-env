@@ -1,4 +1,4 @@
-# Docker Image for processing 3D biomedical images
+# Image3D-env - Docker Image for processing 3D biomedical images
 
 # Build the Docker Image
 
@@ -8,23 +8,7 @@ From the project folder, run the command below:
 
 # Run Docker container
 
-## Standard approach (recommended)
-
-From the project folder, run the command below:
-
-```bash start-docker.sh```
-
-Be aware that the user ```researhcer``` within you Docker container won't share the same ID as the host user!
-
-It is possible to detached from the container (```ctrl + D```) and connect in a second moment with:
-
-```bash connect-docker.sh```
-
-Close the container with:
-
-```bash end-docker```
-
-## docker-compose approach
+## Docker-compose approach (recommended)
 
 Be aware that the user ```researhcer``` within you Docker container won't share the same ID as the host user!
 
@@ -34,7 +18,7 @@ From the project folder, run the command below:
 
 To connect to a container that is already running ("image3d" is the service name):
 
-```docker-compose exec image3d /bin/bash```
+```docker-compose exec image3d bash```
 
 Close the container with:
 
@@ -45,7 +29,7 @@ Close the container with:
 
 You can run the following command:
 
-```docker run -d -it --rm  -p 7777:7777 --volume $HOME:/home/sliceruser/work --entrypoint /bin/bash --user root --name image3d gnasello/image3d-env:latest```
+```docker run -d -it --rm  -p 8888:8888 --volume $HOME:/home/sliceruser/work --entrypoint /bin/bash --user root --name image3d gnasello/image3d-env:latest```
 
 To connect to a container that is already running ("slicer" is the container name):
 
