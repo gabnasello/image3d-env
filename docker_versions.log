@@ -1,0 +1,69 @@
+-------------------------------
+v. 20230112
+
+Python packages installed:
+
+meshio
+
+-------------------------------
+v. 20230111
+
+Python packages installed:
+
+ipyvtklink
+
+-------------------------------
+v. 20230110
+
+Python packages installed:
+
+tetgen
+pymeshfix
+
+-------------------------------
+v. 20230103
+
+Add docker-compose.yaml file
+
+Python packages installed:
+
+matplotlib
+tqdm
+
+-------------------------------
+v. 20221206
+
+Update to Slicer 5.03 [docker image lassoan/slicer-notebook:5.0.3] 
+
+Python packages installed:
+
+- trimesh
+- aicsimageio
+
+-------------------------------
+v. 20221020
+
+Python package installed:
+
+- pyvista
+
+Slicer extension added:
+
+- SegmentMesher
+
+-------------------------------
+v. 20220204
+
+Docker container built on slicer/slicer-notebook
+
+Slicer extensions added to lassoan/slicer-notebook:2021-10-15-b3077c2 :
+
+- SlicerDcm2nii,
+- Sandbox,
+- RawImageGuess,
+- SurfaceWrapSolidify,
+- MarkupsToModel,
+- SegmentEditorExtraEffects,
+- SlicerIGT,
+- Auto3dgm,
+- SlicerMorph
