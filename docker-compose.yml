@@ -2,7 +2,7 @@ version: '3'
 
 services:
   image3d:
-    image: gnasello/image3d-env:2023-01-20
+    image: Dockerfile
     build: .
     ports:
       - $JUPYTERPORT:$JUPYTERPORT
